@@ -1,1 +1,45 @@
-{}
+{
+    "name": "New Controls",
+    "maps": [
+        {
+            "name": "sensor",
+            "id": "47a16438-e74c-448a-8a54-a3c8f359c264",
+            "actions": [
+                {
+                    "name": "acelator",
+                    "type": "Value",
+                    "id": "54f00155-3fca-4959-a388-a98ac2110edc",
+                    "expectedControlType": "Vector3",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "e4e2c37c-690f-4bcb-9034-3db558cb2a19",
+                    "path": "<Accelerometer>/acceleration",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "acelator",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d3459d28-e1a1-45bb-8edb-8311d0278d9f",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "acelator",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
