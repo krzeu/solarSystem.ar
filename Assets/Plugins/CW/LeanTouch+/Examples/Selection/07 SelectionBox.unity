@@ -43,7 +43,7 @@ RenderSettings:
 --- !u!157 &4
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 11
+  serializedVersion: 12
   m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 0e79c42990d681741987f0f602027fb9, type: 2}
 --- !u!196 &5
 NavMeshSettings:
   serializedVersion: 2
@@ -118,6 +118,8 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
@@ -152,6 +154,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0.84370846, w: -0.5368017}
   m_LocalPosition: {x: -0.39, y: 5.01, z: 0}
   m_LocalScale: {x: 1.4547493, y: 1.4547493, z: 1.4547493}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1252364225}
   m_RootOrder: 5
@@ -189,13 +192,17 @@ MonoBehaviour:
   onDeselected:
     m_PersistentCalls:
       m_Calls: []
-  deselectOnUp: 0
   use: 0
-  isolateSelectingFingers: 0
   onSelectedFinger:
     m_PersistentCalls:
       m_Calls: []
   onSelectedFingerUp:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedSelectFinger:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedSelectFingerUp:
     m_PersistentCalls:
       m_Calls: []
 --- !u!23 &10132586
@@ -209,10 +216,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -237,6 +246,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!135 &10132587
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -289,6 +299,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0.5442808, w: 0.83890307}
   m_LocalPosition: {x: 5.060564, y: -5.187266, z: 0}
   m_LocalScale: {x: 1.5575867, y: 1.5575867, z: 1.5575867}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1252364225}
   m_RootOrder: 3
@@ -326,13 +337,17 @@ MonoBehaviour:
   onDeselected:
     m_PersistentCalls:
       m_Calls: []
-  deselectOnUp: 0
   use: 0
-  isolateSelectingFingers: 0
   onSelectedFinger:
     m_PersistentCalls:
       m_Calls: []
   onSelectedFingerUp:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedSelectFinger:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedSelectFingerUp:
     m_PersistentCalls:
       m_Calls: []
 --- !u!23 &261442241
@@ -346,10 +361,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -374,6 +391,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!135 &261442242
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -474,6 +492,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -30}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -536,6 +555,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &445714271
 Canvas:
   m_ObjectHideFlags: 0
@@ -567,6 +587,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -607,6 +628,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0.47238073, w: 0.8813946}
   m_LocalPosition: {x: 14.84, y: -2.11, z: 0}
   m_LocalScale: {x: 1.0717188, y: 1.0717188, z: 1.0717188}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1252364225}
   m_RootOrder: 17
@@ -644,13 +666,17 @@ MonoBehaviour:
   onDeselected:
     m_PersistentCalls:
       m_Calls: []
-  deselectOnUp: 0
   use: 0
-  isolateSelectingFingers: 0
   onSelectedFinger:
     m_PersistentCalls:
       m_Calls: []
   onSelectedFingerUp:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedSelectFinger:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedSelectFingerUp:
     m_PersistentCalls:
       m_Calls: []
 --- !u!23 &500405899
@@ -664,10 +690,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -692,6 +720,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!135 &500405900
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -744,6 +773,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0.9942223, w: -0.107340954}
   m_LocalPosition: {x: -9.18, y: 4.49, z: 0}
   m_LocalScale: {x: 1.1022568, y: 1.1022568, z: 1.1022568}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1252364225}
   m_RootOrder: 1
@@ -781,13 +811,17 @@ MonoBehaviour:
   onDeselected:
     m_PersistentCalls:
       m_Calls: []
-  deselectOnUp: 0
   use: 0
-  isolateSelectingFingers: 0
   onSelectedFinger:
     m_PersistentCalls:
       m_Calls: []
   onSelectedFingerUp:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedSelectFinger:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedSelectFingerUp:
     m_PersistentCalls:
       m_Calls: []
 --- !u!23 &507033318
@@ -801,10 +835,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -829,6 +865,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!135 &507033319
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -878,6 +915,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 909613901}
   m_RootOrder: 0
@@ -902,6 +940,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -955,6 +994,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0.44653615, w: 0.8947656}
   m_LocalPosition: {x: -4.21, y: -3.69, z: 0}
   m_LocalScale: {x: 1.295196, y: 1.295196, z: 1.295196}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1252364225}
   m_RootOrder: 16
@@ -992,13 +1032,17 @@ MonoBehaviour:
   onDeselected:
     m_PersistentCalls:
       m_Calls: []
-  deselectOnUp: 0
   use: 0
-  isolateSelectingFingers: 0
   onSelectedFinger:
     m_PersistentCalls:
       m_Calls: []
   onSelectedFingerUp:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedSelectFinger:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedSelectFingerUp:
     m_PersistentCalls:
       m_Calls: []
 --- !u!23 &577571982
@@ -1012,10 +1056,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1040,6 +1086,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!135 &577571983
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1092,6 +1139,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0.36343485, w: -0.93161964}
   m_LocalPosition: {x: -6.46, y: 6.11, z: 0}
   m_LocalScale: {x: 1.6509969, y: 1.6509969, z: 1.6509969}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1252364225}
   m_RootOrder: 15
@@ -1129,13 +1177,17 @@ MonoBehaviour:
   onDeselected:
     m_PersistentCalls:
       m_Calls: []
-  deselectOnUp: 0
   use: 0
-  isolateSelectingFingers: 0
   onSelectedFinger:
     m_PersistentCalls:
       m_Calls: []
   onSelectedFingerUp:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedSelectFinger:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedSelectFingerUp:
     m_PersistentCalls:
       m_Calls: []
 --- !u!23 &716217085
@@ -1149,10 +1201,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1177,6 +1231,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!135 &716217086
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1229,6 +1284,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0.1965953, w: -0.9804847}
   m_LocalPosition: {x: -9.1, y: -5.7, z: 0}
   m_LocalScale: {x: 1.1015066, y: 1.1015066, z: 1.1015066}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1252364225}
   m_RootOrder: 4
@@ -1266,13 +1322,17 @@ MonoBehaviour:
   onDeselected:
     m_PersistentCalls:
       m_Calls: []
-  deselectOnUp: 0
   use: 0
-  isolateSelectingFingers: 0
   onSelectedFinger:
     m_PersistentCalls:
       m_Calls: []
   onSelectedFingerUp:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedSelectFinger:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedSelectFingerUp:
     m_PersistentCalls:
       m_Calls: []
 --- !u!23 &783927688
@@ -1286,10 +1346,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1314,6 +1376,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!135 &783927689
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1366,6 +1429,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0.43555492, w: -0.90016216}
   m_LocalPosition: {x: -8.142265, y: -0.3800309, z: 0}
   m_LocalScale: {x: 1.07406, y: 1.07406, z: 1.07406}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1252364225}
   m_RootOrder: 2
@@ -1403,13 +1467,17 @@ MonoBehaviour:
   onDeselected:
     m_PersistentCalls:
       m_Calls: []
-  deselectOnUp: 0
   use: 0
-  isolateSelectingFingers: 0
   onSelectedFinger:
     m_PersistentCalls:
       m_Calls: []
   onSelectedFingerUp:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedSelectFinger:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedSelectFingerUp:
     m_PersistentCalls:
       m_Calls: []
 --- !u!23 &786686400
@@ -1423,10 +1491,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1451,6 +1521,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!135 &786686401
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1503,6 +1574,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0.24192873, w: 0.97029406}
   m_LocalPosition: {x: 0.99, y: -1.32, z: 0}
   m_LocalScale: {x: 1.5908263, y: 1.5908263, z: 1.5908263}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1252364225}
   m_RootOrder: 19
@@ -1540,13 +1612,17 @@ MonoBehaviour:
   onDeselected:
     m_PersistentCalls:
       m_Calls: []
-  deselectOnUp: 0
   use: 0
-  isolateSelectingFingers: 0
   onSelectedFinger:
     m_PersistentCalls:
       m_Calls: []
   onSelectedFingerUp:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedSelectFinger:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedSelectFingerUp:
     m_PersistentCalls:
       m_Calls: []
 --- !u!23 &788868429
@@ -1560,10 +1636,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1588,6 +1666,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!135 &788868430
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1640,6 +1719,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0.67332, w: 0.7393512}
   m_LocalPosition: {x: 15.23, y: 4.85, z: -0}
   m_LocalScale: {x: 1.0575193, y: 1.0575193, z: 1.0575193}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1252364225}
   m_RootOrder: 11
@@ -1677,13 +1757,17 @@ MonoBehaviour:
   onDeselected:
     m_PersistentCalls:
       m_Calls: []
-  deselectOnUp: 0
   use: 0
-  isolateSelectingFingers: 0
   onSelectedFinger:
     m_PersistentCalls:
       m_Calls: []
   onSelectedFingerUp:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedSelectFinger:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedSelectFingerUp:
     m_PersistentCalls:
       m_Calls: []
 --- !u!23 &885670093
@@ -1697,10 +1781,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1725,6 +1811,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!135 &885670094
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1774,6 +1861,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 543305608}
   m_Father: {fileID: 1214329274}
@@ -1799,6 +1887,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 1, b: 0, a: 0.2509804}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1852,6 +1941,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0.020399109, w: 0.9997919}
   m_LocalPosition: {x: -11.732367, y: -2.0204597, z: 0}
   m_LocalScale: {x: 1.0918919, y: 1.0918919, z: 1.0918919}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1252364225}
   m_RootOrder: 18
@@ -1889,13 +1979,17 @@ MonoBehaviour:
   onDeselected:
     m_PersistentCalls:
       m_Calls: []
-  deselectOnUp: 0
   use: 0
-  isolateSelectingFingers: 0
   onSelectedFinger:
     m_PersistentCalls:
       m_Calls: []
   onSelectedFingerUp:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedSelectFinger:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedSelectFingerUp:
     m_PersistentCalls:
       m_Calls: []
 --- !u!23 &1033562529
@@ -1909,10 +2003,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1937,6 +2033,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!135 &1033562530
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1978,11 +2075,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 22410238, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22410238, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22410238, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
-      propertyPath: m_AnchorMax.y
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22410238, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
+      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22410238, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
@@ -1993,11 +2098,39 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 22410238, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
+    - target: {fileID: 22438504, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22438504, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22438504, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22438504, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22438504, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22438504, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22438504, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22438504, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 22410238, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
+    - target: {fileID: 22438504, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
@@ -2014,6 +2147,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22438504, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22438504, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
@@ -2026,14 +2163,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22438504, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 22438504, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22438504, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -2041,52 +2170,12 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 22438504, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22438504, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22438504, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22438504, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22438504, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22438504, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22438504, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22438504, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22480264, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 22480264, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22480264, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22480264, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
-      propertyPath: m_AnchoredPosition.y
+      propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22480264, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
@@ -2097,8 +2186,15 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114457744909205792, guid: 8df6337a574cdad4bb6ec66cc50c6c2b,
-        type: 3}
+    - target: {fileID: 22480264, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22480264, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114457744909205792, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
       propertyPath: m_Text
       value: This shows you how to select objects in the style of strategy games
         by dragging a selection box across the screen. This is done using the <color=#0FF>LeanSelectionBox</color>
@@ -2106,98 +2202,116 @@ PrefabInstance:
         root, and the <color=#0FF>Prefab</color> setting is set to a selection box
         prefab that will be spawned when you drag across the screen.
       objectReference: {fileID: 0}
-    - target: {fileID: 224356063559649096, guid: 8df6337a574cdad4bb6ec66cc50c6c2b,
-        type: 3}
+    - target: {fileID: 224356063559649096, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 224363055373148510, guid: 8df6337a574cdad4bb6ec66cc50c6c2b,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224363055373148510, guid: 8df6337a574cdad4bb6ec66cc50c6c2b,
-        type: 3}
+    - target: {fileID: 224363055373148510, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 224494468789392064, guid: 8df6337a574cdad4bb6ec66cc50c6c2b,
-        type: 3}
-      propertyPath: m_AnchorMin.y
+    - target: {fileID: 224363055373148510, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
+      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 224494468789392064, guid: 8df6337a574cdad4bb6ec66cc50c6c2b,
-        type: 3}
+    - target: {fileID: 224494468789392064, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 224494468789392064, guid: 8df6337a574cdad4bb6ec66cc50c6c2b,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
+    - target: {fileID: 224494468789392064, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
+      propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 224494468789392064, guid: 8df6337a574cdad4bb6ec66cc50c6c2b,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224494468789392064, guid: 8df6337a574cdad4bb6ec66cc50c6c2b,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224494468789392064, guid: 8df6337a574cdad4bb6ec66cc50c6c2b,
-        type: 3}
+    - target: {fileID: 224494468789392064, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 225251752922884782, guid: 8df6337a574cdad4bb6ec66cc50c6c2b,
-        type: 3}
+    - target: {fileID: 224494468789392064, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224494468789392064, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224494468789392064, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 225251752922884782, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
       propertyPath: m_Alpha
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 225251752922884782, guid: 8df6337a574cdad4bb6ec66cc50c6c2b,
-        type: 3}
+    - target: {fileID: 225251752922884782, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
       propertyPath: m_Interactable
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 225251752922884782, guid: 8df6337a574cdad4bb6ec66cc50c6c2b,
-        type: 3}
+    - target: {fileID: 225251752922884782, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
       propertyPath: m_BlocksRaycasts
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 225261064821389912, guid: 8df6337a574cdad4bb6ec66cc50c6c2b,
-        type: 3}
+    - target: {fileID: 225261064821389912, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
       propertyPath: m_Alpha
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 225261064821389912, guid: 8df6337a574cdad4bb6ec66cc50c6c2b,
-        type: 3}
+    - target: {fileID: 225261064821389912, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
       propertyPath: m_Interactable
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 225261064821389912, guid: 8df6337a574cdad4bb6ec66cc50c6c2b,
-        type: 3}
+    - target: {fileID: 225261064821389912, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
       propertyPath: m_BlocksRaycasts
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1907904612675879445, guid: 8df6337a574cdad4bb6ec66cc50c6c2b,
-        type: 3}
+    - target: {fileID: 1907904612675879445, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
       propertyPath: m_Text
       value: Drag = Select
       objectReference: {fileID: 0}
-    - target: {fileID: 3842902602399203594, guid: 8df6337a574cdad4bb6ec66cc50c6c2b,
-        type: 3}
+    - target: {fileID: 3842902602399203594, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3842902602399203594, guid: 8df6337a574cdad4bb6ec66cc50c6c2b,
-        type: 3}
+    - target: {fileID: 3842902602399203594, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
       propertyPath: m_LocalPosition.z
       value: -30
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2608960281581768207, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
+--- !u!1 &1105463339 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 42099737742954725, guid: 8df6337a574cdad4bb6ec66cc50c6c2b, type: 3}
+  m_PrefabInstance: {fileID: 1105463338}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1105463340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105463339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
+  m_CursorLockBehavior: 0
 --- !u!1 &1127525904
 GameObject:
   m_ObjectHideFlags: 0
@@ -2252,13 +2366,17 @@ MonoBehaviour:
   onDeselected:
     m_PersistentCalls:
       m_Calls: []
-  deselectOnUp: 0
   use: 0
-  isolateSelectingFingers: 0
   onSelectedFinger:
     m_PersistentCalls:
       m_Calls: []
   onSelectedFingerUp:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedSelectFinger:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedSelectFingerUp:
     m_PersistentCalls:
       m_Calls: []
 --- !u!23 &1127525907
@@ -2272,10 +2390,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2300,6 +2420,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!135 &1127525908
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2331,6 +2452,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0.44790515, w: -0.89408106}
   m_LocalPosition: {x: -15.22, y: -5.42, z: 0}
   m_LocalScale: {x: 1.2188896, y: 1.2188896, z: 1.2188896}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1252364225}
   m_RootOrder: 8
@@ -2366,6 +2488,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0.56732523, w: 0.82349384}
   m_LocalPosition: {x: -3.81, y: 3.4, z: 0}
   m_LocalScale: {x: 1.3908591, y: 1.3908591, z: 1.3908591}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1252364225}
   m_RootOrder: 6
@@ -2403,13 +2526,17 @@ MonoBehaviour:
   onDeselected:
     m_PersistentCalls:
       m_Calls: []
-  deselectOnUp: 0
   use: 0
-  isolateSelectingFingers: 0
   onSelectedFinger:
     m_PersistentCalls:
       m_Calls: []
   onSelectedFingerUp:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedSelectFinger:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedSelectFingerUp:
     m_PersistentCalls:
       m_Calls: []
 --- !u!23 &1149574099
@@ -2423,10 +2550,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2451,6 +2580,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!135 &1149574100
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2503,6 +2633,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0.3033974, w: -0.95286417}
   m_LocalPosition: {x: 11.39, y: 2.21, z: -0}
   m_LocalScale: {x: 1.2926736, y: 1.2926736, z: 1.2926736}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1252364225}
   m_RootOrder: 12
@@ -2540,13 +2671,17 @@ MonoBehaviour:
   onDeselected:
     m_PersistentCalls:
       m_Calls: []
-  deselectOnUp: 0
   use: 0
-  isolateSelectingFingers: 0
   onSelectedFinger:
     m_PersistentCalls:
       m_Calls: []
   onSelectedFingerUp:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedSelectFinger:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedSelectFingerUp:
     m_PersistentCalls:
       m_Calls: []
 --- !u!23 &1174910727
@@ -2560,10 +2695,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2588,6 +2725,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!135 &1174910728
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2644,6 +2782,10 @@ MonoBehaviour:
   prefab: {fileID: 909613901}
   root: {fileID: 445714272}
   select: {fileID: 1214329275}
+  requiredLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  requiredTags: []
 --- !u!4 &1214329274
 Transform:
   m_ObjectHideFlags: 0
@@ -2654,6 +2796,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 909613901}
   m_Father: {fileID: 0}
@@ -2687,12 +2830,12 @@ MonoBehaviour:
       m_Calls: []
   ScreenQuery:
     Method: 0
-    Search: 1
-    RequiredTag: 
-    Camera: {fileID: 0}
     Layers:
       serializedVersion: 2
       m_Bits: 4294967291
+    Search: 1
+    RequiredTag: 
+    Camera: {fileID: 0}
     Distance: 50
   deselectWithFingers: 0
   onSelectedFinger:
@@ -2729,6 +2872,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0.76155114, w: 0.6481049}
   m_LocalPosition: {x: 6.8400745, y: 0.37241203, z: 0}
   m_LocalScale: {x: 1.9300042, y: 1.9300042, z: 1.9300042}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1252364225}
   m_RootOrder: 9
@@ -2766,13 +2910,17 @@ MonoBehaviour:
   onDeselected:
     m_PersistentCalls:
       m_Calls: []
-  deselectOnUp: 0
   use: 0
-  isolateSelectingFingers: 0
   onSelectedFinger:
     m_PersistentCalls:
       m_Calls: []
   onSelectedFingerUp:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedSelectFinger:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedSelectFingerUp:
     m_PersistentCalls:
       m_Calls: []
 --- !u!23 &1224587564
@@ -2786,10 +2934,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2814,6 +2964,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!135 &1224587565
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2861,6 +3012,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1765220722}
   - {fileID: 507033315}
@@ -2917,6 +3069,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0.076345675, w: 0.9970814}
   m_LocalPosition: {x: 8.97, y: -3.71, z: 0}
   m_LocalScale: {x: 1.1505139, y: 1.1505139, z: 1.1505139}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1252364225}
   m_RootOrder: 10
@@ -2954,13 +3107,17 @@ MonoBehaviour:
   onDeselected:
     m_PersistentCalls:
       m_Calls: []
-  deselectOnUp: 0
   use: 0
-  isolateSelectingFingers: 0
   onSelectedFinger:
     m_PersistentCalls:
       m_Calls: []
   onSelectedFingerUp:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedSelectFinger:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedSelectFingerUp:
     m_PersistentCalls:
       m_Calls: []
 --- !u!23 &1428683704
@@ -2974,10 +3131,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3002,6 +3161,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!135 &1428683705
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3054,6 +3214,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0.8446535, w: -0.53531355}
   m_LocalPosition: {x: 7.76, y: 4.92, z: 0}
   m_LocalScale: {x: 1.2126025, y: 1.2126025, z: 1.2126025}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1252364225}
   m_RootOrder: 14
@@ -3091,13 +3252,17 @@ MonoBehaviour:
   onDeselected:
     m_PersistentCalls:
       m_Calls: []
-  deselectOnUp: 0
   use: 0
-  isolateSelectingFingers: 0
   onSelectedFinger:
     m_PersistentCalls:
       m_Calls: []
   onSelectedFingerUp:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedSelectFinger:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedSelectFingerUp:
     m_PersistentCalls:
       m_Calls: []
 --- !u!23 &1538271987
@@ -3111,10 +3276,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3139,6 +3306,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!135 &1538271988
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3190,16 +3358,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fc98219a83dff145947365dc914d06e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  listenForInput: 1
-  TapThreshold: 0.5
-  SwipeThreshold: 50
-  ReferenceDpi: 200
-  GuiLayers:
+  tapThreshold: 0.2
+  swipeThreshold: 100
+  referenceDpi: 200
+  guiLayers:
     serializedVersion: 2
     m_Bits: 32
-  RecordFingers: 1
-  RecordThreshold: 5
-  RecordLimit: 0
+  useTouch: 1
+  useHover: 1
+  useMouse: 1
+  useSimulator: 1
+  disableMouseEmulation: 1
+  recordFingers: 1
+  recordThreshold: 5
+  recordLimit: 10
 --- !u!4 &1650081526
 Transform:
   m_ObjectHideFlags: 0
@@ -3210,6 +3382,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -3261,6 +3434,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.97, y: 2.93, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1252364225}
   m_RootOrder: 0
@@ -3298,13 +3472,17 @@ MonoBehaviour:
   onDeselected:
     m_PersistentCalls:
       m_Calls: []
-  deselectOnUp: 0
   use: 0
-  isolateSelectingFingers: 0
   onSelectedFinger:
     m_PersistentCalls:
       m_Calls: []
   onSelectedFingerUp:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedSelectFinger:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedSelectFingerUp:
     m_PersistentCalls:
       m_Calls: []
 --- !u!23 &1765220725
@@ -3318,10 +3496,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3346,6 +3526,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!135 &1765220726
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3398,6 +3579,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0.41383794, w: -0.91035056}
   m_LocalPosition: {x: 0.3, y: -5.26, z: 0}
   m_LocalScale: {x: 1.8947657, y: 1.8947657, z: 1.8947657}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1252364225}
   m_RootOrder: 20
@@ -3435,13 +3617,17 @@ MonoBehaviour:
   onDeselected:
     m_PersistentCalls:
       m_Calls: []
-  deselectOnUp: 0
   use: 0
-  isolateSelectingFingers: 0
   onSelectedFinger:
     m_PersistentCalls:
       m_Calls: []
   onSelectedFingerUp:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedSelectFinger:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedSelectFingerUp:
     m_PersistentCalls:
       m_Calls: []
 --- !u!23 &2032291726
@@ -3455,10 +3641,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3483,6 +3671,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!135 &2032291727
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3535,6 +3724,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0.55417323, w: 0.8324014}
   m_LocalPosition: {x: 11.33, y: 7.67, z: 0}
   m_LocalScale: {x: 1.783386, y: 1.783386, z: 1.783386}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1252364225}
   m_RootOrder: 7
@@ -3572,13 +3762,17 @@ MonoBehaviour:
   onDeselected:
     m_PersistentCalls:
       m_Calls: []
-  deselectOnUp: 0
   use: 0
-  isolateSelectingFingers: 0
   onSelectedFinger:
     m_PersistentCalls:
       m_Calls: []
   onSelectedFingerUp:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedSelectFinger:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedSelectFingerUp:
     m_PersistentCalls:
       m_Calls: []
 --- !u!23 &2070856054
@@ -3592,10 +3786,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3620,6 +3816,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!135 &2070856055
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3672,6 +3869,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0.9179654, w: 0.39666045}
   m_LocalPosition: {x: -14.58, y: 2.48, z: 0}
   m_LocalScale: {x: 1.0109897, y: 1.0109897, z: 1.0109897}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1252364225}
   m_RootOrder: 13
@@ -3709,13 +3907,17 @@ MonoBehaviour:
   onDeselected:
     m_PersistentCalls:
       m_Calls: []
-  deselectOnUp: 0
   use: 0
-  isolateSelectingFingers: 0
   onSelectedFinger:
     m_PersistentCalls:
       m_Calls: []
   onSelectedFingerUp:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedSelectFinger:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedSelectFingerUp:
     m_PersistentCalls:
       m_Calls: []
 --- !u!23 &2127909770
@@ -3729,10 +3931,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3757,6 +3961,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!135 &2127909771
 SphereCollider:
   m_ObjectHideFlags: 0
